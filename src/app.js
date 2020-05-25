@@ -5,7 +5,7 @@ const hbs = require("hbs");
 const forecast = require("./utils/forecast.js");
 const geocode = require("./utils/geocode.js");
 // Define paths for Express Config
-//console.log(__dirname);
+const port = process.env.PORT || 3000;
 
 const publicLocation = path.join(__dirname, "../public");
 const viewsLocation = path.join(__dirname, "../templates/views");
@@ -89,6 +89,6 @@ app.get("*", (req, res) => {
     name: "Ashutosh",
   });
 });
-app.listen(3000, () => {
-  console.log("Server is on port 3000");
+app.listen(port, () => {
+  console.log("Server is on port " + port);
 });
