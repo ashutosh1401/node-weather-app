@@ -22,7 +22,8 @@ const forecast = (latitude, longitude, callback) => {
           body.current.precip +
           "% chance of rain." +
           "Also Humidity of the region is " +
-          body.current.humidity
+          body.current.humidity +
+          "%"
       );
     }
   });
